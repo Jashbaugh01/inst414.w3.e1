@@ -1,0 +1,10 @@
+import requests
+r1 = requests.get('https://api.aviationapi.com/v1/airports/', params = "apt=DCA")
+r2 = requests.get('https://api.aviationapi.com/v1/airports/', params = "apt=IAD")
+r3 = requests.get('https://api.aviationapi.com/v1/airports/', params = "apt=BWI")
+r11 = r1.json()
+r22 = r2.json()
+r33 = r3.json()
+print(r11["DCA"][0]["manager"])
+print(r22["IAD"][0]["manager"])
+print(r33["BWI"][0]["manager"])
